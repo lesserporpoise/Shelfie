@@ -17,7 +17,7 @@ module.exports={
     })
     },
 
-    update:(req,res,next) => {const dbInstance = req.app.get('db');
+    update:(req,res) => {const dbInstance = req.app.get('db');
         dbInstance.update_product(req.params.id,req.body.name,req.body.price,req.body.imgurl)
         .then(()=>res.sendStatus(200))
         .catch(err=>{
@@ -26,7 +26,7 @@ module.exports={
         })
 },
 
-    delete:(req,res,next) => {const dbInstance = req.app.get('db');
+    delete:(req,res) => {const dbInstance = req.app.get('db');
         dbInstance.delete_product(req.params.id)
         .then(()=>res.sendStatus(200))
         .catch(err=>{

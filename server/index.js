@@ -11,8 +11,8 @@ app.use(bodyParser.json());
 
 app.get('/api/inventory', controller.read);
 app.post('/api/product', controller.create);
-app.put('/api/inventory/:id', controller.update);
-app.delete('/api/inventory/:id', controller.delete);
+app.put('/api/product/:id', controller.update);
+app.delete('/api/product/:id', controller.delete);
 
 const port = process.env.PORT || 3000
 app.listen(port, ()=>console.log("Wubstep activated on port: "+port+" wub wub wub..."));
