@@ -5,7 +5,7 @@ import Dashboard from './components/dashboard/Dashboard'
 import Form from './components/form/Form'
 import Header from './components/header/Header'
 import axios from 'axios'
-const baseUrl = "http://localhost:3500/api/inventory"
+const getUrl = "/api/inventory"
 
 
 
@@ -17,7 +17,7 @@ class App extends Component {
   }
   }
   componentDidMount(){
-    axios.get(baseUrl).then((response)=>{
+    axios.get(getUrl).then((response)=>{
       this.setState({invList:response})}).catch((err)=>console.log(err));
       console.log(this.state)
   }

@@ -10,9 +10,9 @@ app.use(bodyParser.json());
 
 
 app.get('/api/inventory', controller.read);
-app.post('/api/inventory', controller.create);
+app.post('/api/product', controller.create);
 app.put('/api/inventory/:id', controller.update);
 app.delete('/api/inventory/:id', controller.delete);
 
-
-app.listen(process.env.PORT || 3000, ()=>console.log("Wubstep activated on port: "+process.env.PORT+" wub wub wub..."));
+const port = process.env.PORT || 3000
+app.listen(port, ()=>console.log("Wubstep activated on port: "+port+" wub wub wub..."));
